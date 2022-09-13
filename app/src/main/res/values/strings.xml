@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">cft_testing</string>
+    <string name="sharedPrefs">sharedPrefs</string>
+    <string name="sharedPrefsIsRegistered">sharedPrefsIsRegistered</string>
 </resources>

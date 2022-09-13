@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
             supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         val navController = navHostFragment.navController
         navController.apply {
-            if (false) {
+            if (viewModel.isRegistered()) {
                 setGraph(R.navigation.nav_graph_default)
             } else
                 setGraph(R.navigation.nav_graph_on_register)
