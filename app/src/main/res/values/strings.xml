@@ -3,4 +3,10 @@
     <string name="sharedPrefs">sharedPrefs</string>
     <string name="sharedPrefsIsRegistered">sharedPrefsIsRegistered</string>
     <string name="greet">Приветствие</string>
+    <string name="surname">Фамилия</string>
+    <string name="passwordConfirm">Подтвердите пароль</string>
+    <string name="dateOfBirth">Дата Рождения</string>
+    <string name="name">Имя</string>
+    <string name="password">Пароль</string>
+    <string name="register">Зарегистрироваться</string>
 </resources>
