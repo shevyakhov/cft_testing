@@ -1,4 +1,4 @@
-package com.example.cft_testing
+package com.example.cft_testing.registration
 
 import androidx.lifecycle.ViewModel
 
