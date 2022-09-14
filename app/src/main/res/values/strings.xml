@@ -22,4 +22,5 @@
     <string name="sharedPrefsDateOfBirth">sharedPrefsDateOfBirth</string>
     <string name="sharedPrefsName">sharedPrefsName</string>
     <string name="sharedPrefsSurname">sharedPrefsSurname</string>
+    <string name="empty" />
 </resources>
