@@ -29,5 +29,6 @@ class MainActivity : AppCompatActivity() {
             } else
                 setGraph(R.navigation.nav_graph_on_register)
         }
+        navController.popBackStack()
     }
 }

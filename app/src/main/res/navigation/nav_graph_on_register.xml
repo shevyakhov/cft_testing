@@ -9,10 +9,12 @@
         android:id="@+id/registrationFragment"
         android:name="com.example.cft_testing.registration.RegistrationFragment"
         android:label="fragment_registration"
+        app:popUpToInclusive="true"
         tools:layout="@layout/fragment_registration" />
     <fragment
         android:id="@+id/greetFragment"
         android:name="com.example.cft_testing.greeting.GreetFragment"
         android:label="fragment_greet"
+        app:popUpToInclusive="true"
         tools:layout="@layout/fragment_greet" />
 </navigation>

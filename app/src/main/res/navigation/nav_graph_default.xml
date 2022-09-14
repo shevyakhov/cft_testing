@@ -7,11 +7,13 @@
 
     <fragment
         android:id="@+id/registrationFragment"
+        app:popUpToInclusive="true"
         android:name="com.example.cft_testing.registration.RegistrationFragment"
         android:label="fragment_registration"
         tools:layout="@layout/fragment_registration" />
     <fragment
         android:id="@+id/greetFragment"
+        app:popUpToInclusive="true"
         android:name="com.example.cft_testing.greeting.GreetFragment"
         android:label="fragment_greet"
         tools:layout="@layout/fragment_greet" />

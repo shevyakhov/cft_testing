@@ -141,6 +141,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
         android:background="@drawable/round_btn"
+        android:focusableInTouchMode="false"
         android:text="@string/register"
         app:backgroundTint="@null" />
 
