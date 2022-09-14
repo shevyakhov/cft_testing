@@ -10,10 +10,17 @@ import java.util.*
 class RegistrationViewModel(private val app: Application) : AndroidViewModel(app) {
 
     fun registerUser(user: User) {
+        //since its an easy project using room and dagger is way too heavy
         val sharedPrefs: SharedPreferences =
             app.getSharedPreferences(app.getString(R.string.sharedPrefs), Context.MODE_PRIVATE)
         val editor: SharedPreferences.Editor = sharedPrefs.edit()
-        editor.putString("key", "value")
+        editor.putString(app.getString(R.string.sharedPrefsSurname), user.surname)
+        editor.putString(app.getString(R.string.sharedPrefsName), user.name)
+        editor.putString(
+            app.getString(R.string.sharedPrefsDateOfBirth),
+            user.dateOfBirth.toString()
+        )
+        editor.putString(app.getString(R.string.sharedPrefsPassword), user.password)
         editor.apply()
     }
 

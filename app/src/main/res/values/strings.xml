@@ -17,4 +17,9 @@
     <string name="passwordConfirmCheck">Пароли не совпадают</string>
     <string name="ok">OK</string>
     <string name="choose">✔</string>
+    <string name="dash">-</string>
+    <string name="sharedPrefsPassword">sharedPrefsPassword</string>
+    <string name="sharedPrefsDateOfBirth">sharedPrefsDateOfBirth</string>
+    <string name="sharedPrefsName">sharedPrefsName</string>
+    <string name="sharedPrefsSurname">sharedPrefsSurname</string>
 </resources>

@@ -5,6 +5,8 @@ import java.util.*
 data class User(
     val surname: String,
     val name: String,
-    var dateOfBirth: Date,
+    var dateOfBirth: MDate,
     var password: String
-)
+){
+
+}

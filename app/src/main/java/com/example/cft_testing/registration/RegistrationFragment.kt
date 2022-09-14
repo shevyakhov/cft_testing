@@ -44,6 +44,16 @@ class RegistrationFragment : Fragment() {
                 isPasswordConfirmed()
 
             ) {
+                with(binding) {
+                    val surname = editTextSurname.text.toString()
+                    val name = editTextName.text.toString()
+                    val (day, month, year) = textDate.text.split("-").map { it.toInt() }
+                    val dateOfBirth = MDate(day, month, year)
+                    val password = password.text.toString()
+                    viewModel.registerUser(User(surname, name, dateOfBirth, password))
+                }
+
+
                 findNavController().navigate(R.id.greetFragment)
 
             }
@@ -86,9 +96,10 @@ class RegistrationFragment : Fragment() {
     }
 
     private fun isDateReal(): Boolean {
-        return if (binding.textDate.text.contains("-")) {
+        return if (binding.textDate.text.contains(getString(R.string.dash))) {
             binding.textDate.clearFocus()
-            val (day, month, year) = binding.textDate.text.split("-").map { it.toInt() }
+            val (day, month, year) = binding.textDate.text.split(getString(R.string.dash))
+                .map { it.toInt() }
             val date = MDate(day, month, year)
             if (!viewModel.isDateCorrect(date)) {
                 binding.textDate.error = requireContext().getString(R.string.dateCheck)
