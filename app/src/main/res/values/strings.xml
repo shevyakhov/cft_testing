@@ -10,4 +10,11 @@
     <string name="password">Пароль</string>
     <string name="register">Зарегистрироваться</string>
     <string name="hello">Привет</string>
+    <string name="surnameCheck">Фамилия должна быть больше 2х символов</string>
+    <string name="nameCheck">Имя должно быть больше 1 символа</string>
+    <string name="dateCheck">Невозможная дата</string>
+    <string name="passwordCheck">Пароль должен содержать цифры и буквы в обоих регистрах</string>
+    <string name="passwordConfirmCheck">Пароли не совпадают</string>
+    <string name="ok">ok</string>
+    <string name="choose">✔</string>
 </resources>

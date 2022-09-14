@@ -17,74 +17,94 @@
         android:scaleType="fitCenter"
         android:src="@drawable/register" />
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/editTextSurname"
-        style="@style/mainEditText"
-        android:layout_below="@id/image"
-        android:background="@drawable/round_corners"
-        android:hint="@string/surname"
-        android:importantForAutofill="no"
-        android:inputType="text"
-        tools:ignore="RtlSymmetry" />
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/editTextName"
-        style="@style/mainEditText"
-        android:layout_below="@id/editTextSurname"
-        android:background="@drawable/round_corners"
-        android:hint="@string/name"
-        android:importantForAutofill="no"
-        android:inputType="text"
-        tools:ignore="RtlSymmetry" />
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/date_picker_card"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/SurnameLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/editTextName"
-        android:layout_marginHorizontal="20dp">
+        android:layout_below="@id/image"
+        android:layout_marginHorizontal="20dp"
+        app:errorEnabled="true">
 
-        <RelativeLayout
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextSurname"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/round_corners">
+            android:layout_height="wrap_content"
+            android:hint="@string/surname"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            tools:ignore="RtlSymmetry" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-            <TextView
-                android:id="@+id/textDate"
-                style="@style/mainText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="@string/dateOfBirth" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nameLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/SurnameLayout"
+        android:layout_marginHorizontal="20dp"
+        app:errorEnabled="true">
 
-            <DatePicker
-                android:id="@+id/dateOfBirthPicker"
-                android:layout_width="match_parent"
-                android:layout_height="120dp"
-                android:layout_below="@id/textDate"
-                android:layout_centerHorizontal="true"
-                android:layout_marginHorizontal="20dp"
-                android:layout_marginVertical="10dp"
-                android:calendarViewShown="false"
-                android:datePickerMode="spinner"
-                android:importantForAutofill="no" />
-        </RelativeLayout>
-    </androidx.cardview.widget.CardView>
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/name"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            tools:ignore="RtlSymmetry" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/textDate"
+        style="@android:style/Widget.Material.EditText"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nameLayout"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/round_corners"
+        android:clickable="false"
+        android:focusable="false"
+        android:hint="@string/dateOfBirth"
+        android:inputType="none"
+        android:padding="20dp"
+        android:paddingStart="15dp"
+        tools:ignore="RtlSymmetry" />
+
+    <Button
+        android:id="@+id/dateBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/passwordInputLayout"
+        android:layout_below="@id/nameLayout"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:layout_toEndOf="@id/textDate"
+        android:background="@drawable/round_corners"
+        android:gravity="center"
+        android:text="@string/choose"
+        android:textColor="@color/black"
+        app:backgroundTint="@null"
+        tools:ignore="RtlSymmetry" />
 
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/passwordInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/date_picker_card"
-        app:boxStrokeWidth="0dp"
-        app:boxStrokeWidthFocused="0dp"
-        app:passwordToggleEnabled="true">
+        android:layout_below="@id/textDate"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        app:errorEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/password"
-            style="@style/mainEditText"
-            android:background="@drawable/round_corners"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:ems="15"
             android:gravity="start"
             android:hint="@string/password"
@@ -94,18 +114,17 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/passwordConfirmInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@id/registerBtn"
         android:layout_below="@id/passwordInputLayout"
-        app:boxStrokeWidth="0dp"
-        app:boxStrokeWidthFocused="0dp"
-        app:passwordToggleEnabled="true">
+        android:layout_marginHorizontal="20dp"
+        app:errorEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/confirmPassword"
-            style="@style/mainEditText"
-            android:background="@drawable/round_corners"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:ems="15"
             android:gravity="start"
             android:hint="@string/passwordConfirm"

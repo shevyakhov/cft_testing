@@ -34,5 +34,7 @@
         <item name="android:textAlignment">textStart</item>
         <item name="android:paddingStart">20dp</item>
     </style>
-
+    <style name="myDatePickerStyle" parent="android:Widget.Material.DatePicker">
+        <item name="android:datePickerMode">spinner</item>
+    </style>
 </resources>
