@@ -21,7 +21,6 @@ class RegistrationViewModel(private val app: Application) : AndroidViewModel(app
             user.dateOfBirth.toString()
         )
         editor.putString(app.getString(R.string.sharedPrefsPassword), user.password)
-
         /*registration flag*/
         editor.putBoolean(app.getString(R.string.sharedPrefsIsRegistered), true)
         editor.apply()
